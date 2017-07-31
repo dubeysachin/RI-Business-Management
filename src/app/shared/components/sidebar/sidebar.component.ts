@@ -15,9 +15,9 @@ const menus: Menus[] =[
 
 const subMenus: SubMenus[] =[
     {name:'employees', parent:'master', display:'Employees', link:'/employees/', iconClass:'fa fa-user-o'},
-    {name:'machines',parent:'master', display:'Machines', link:'/machines/', iconClass:'fa fa-cogs'},
-    {name:'clients',parent:'master', display:'Clients', link:'/clients/', iconClass:'fa fa-handshake-o'},
-    {name:'vendors',parent:'master', display:'Vendors', link:'/vendors/', iconClass:'fa fa-th-list'}
+    {name:'machines',parent:'master', display:'Machines', link:'/machines/', iconClass:'fa fa-truck'},
+    {name:'clients',parent:'master', display:'Clients', link:'/clients/', iconClass:'fa fa-id-card-o'},
+    {name:'vendors',parent:'master', display:'Vendors', link:'/vendors/', iconClass:'fa fa-handshake-o'}
 ]
 
 
