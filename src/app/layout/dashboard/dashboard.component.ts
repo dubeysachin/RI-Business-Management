@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
         { data: [65, 59, 80, 81, 56, 55, 40], label: 'Work orders' },        
     ];
 
-    public pieChartLabels: string[] = ['Damage', 'Ready for Service' ,'Repair', 'In Use'];
+    public pieChartLabels: string[] = ['Breakdown', 'Ready for Service' ,'Maintanance Due', 'In Use'];
     public pieChartData: number[] = [5, 50, 20, 30];
     public pieChartType: string = 'pie';
 
@@ -36,6 +36,4 @@ export class DashboardComponent implements OnInit {
     public chartHovered(e: any): void {
         // console.log(e);
     }
-
-    
 }
