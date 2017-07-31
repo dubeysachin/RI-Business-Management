@@ -1,0 +1,43 @@
+<div >
+   <app-page-header [heading]="'Employees'" ></app-page-header>
+
+    <div>
+        <div class="card mb-3">       
+            <div class="card-header">
+                <button type="button" class="btn btn-default">Add Employee</button>    
+            </div>         
+            <div class="card-block table-responsive">
+                <table class="table card-block table-hover">
+                    <thead class="thead-inverse">
+                    <tr>
+                        <th style="display: none"></th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Mobile No.</th>
+                        <th>Email Address</th>
+                        <th>DOB</th>
+                        <th>Address</th>
+                        <th>State</th>
+                        <th>City</th>
+                        <th>Pin Code</th>                            
+                    </tr>
+                    </thead>
+                    <tbody >
+                        <tr *ngFor="let employee of employees" (click)="selectedRow()">
+                            <th scope="row" style="display: none"  >{{employee.id}}</th>
+                            <td ><span>{{employee.firstName}}</span></td>
+                            <td>{{employee.lastName}}</td>
+                            <td>{{employee.mobileNo}}</td>
+                            <td>{{employee.emailAddress}}</td>
+                            <td>{{employee.dob}}</td>
+                            <td>{{employee.address}}</td>
+                            <td>{{employee.state}}</td>
+                            <td>{{employee.city}}</td>
+                            <td>{{employee.pinCode}}</td>   
+                        </tr>                    
+                    </tbody>
+                </table>                    
+            </div>
+        </div>
+    </div>
+</div>

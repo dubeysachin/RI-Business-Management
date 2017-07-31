@@ -1,0 +1,46 @@
+<nav class="sidebar">
+
+    <ul class="list-group" *ngFor="let menu of menus" >        
+        <a *ngIf="!menu.subMenu" [routerLink] = "[menu.link]" [routerLinkActive]="['router-link-active']" class="list-group-item" >
+            <i class={{menu.iconClass}}></i>&nbsp;<span>{{menu.display}}</span>
+        </a>  
+        <div class="nested-menu">
+            <a *ngIf="menu.subMenu"  class="list-group-item" (click)="addExpandClass(menu)" >
+                <i class={{menu.iconClass}}></i>&nbsp;<span>{{menu.display}}</span>
+            </a>  
+            
+            <li *ngIf="menu.subMenu" class="nested" [class.expand]="showMenu === menu.name">
+                <ul class="submenu" >                                        
+                    <a *ngFor="let subMenu of subMenus" [routerLink] = "[subMenu.link]" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                        <i class={{subMenu.iconClass}}></i>&nbsp;<span>{{subMenu.display}}</span>
+                    </a>                    
+                </ul>
+                
+            </li>
+        </div>
+    </ul>
+        
+     <!--   <div class="nested-menu">
+            <a class="list-group-item" >
+                <span><i class="fa fa-plus"></i>&nbsp;{{ 'Master'  }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'pages'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink] = "['/employees']" [routerLinkActive] ="['router-link-active']" class="list-group-item">
+                            <i class="fa fa-th-list"></i>&nbsp;{{ 'Employees' }}</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><span>{{ 'Machines' }}</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><span>{{ 'Clients' }}</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"><span>{{ 'Vendors' }}</span></a>
+                        </li>
+                </ul>
+            </li>
+        </div>     -->   
+    
+</nav>
